@@ -20,4 +20,4 @@ A christmas tree which dances to music played on my computer.
 | **wiring** | **Mechanism** | **wireframe** |
 | :---: | :---: | :---: |
 | <img width="778" height="501" alt="image" src="https://github.com/user-attachments/assets/abef33af-e812-4351-933e-59c16173c8ab" />| <img width="391" height="468" alt="image" src="https://github.com/user-attachments/assets/f6404c10-63d4-495a-bed7-53a12203e94e" />|<img width="498" height="574" alt="image" src="https://github.com/user-attachments/assets/8c3d9f50-4440-477f-9632-72afd065df6d" />
-|
+
