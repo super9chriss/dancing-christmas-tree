@@ -1,5 +1,5 @@
 # Dancing christmas tree
-A christmas tree which dances to music played on my computer.
+A christmas tree which dances to music played on my computer. I was at a Christmas market and saw dancing christmas trees there and thought they were nice but they only dance to jingle bells so i wanted to make my own which dances to all songs.
 
 <div align="center">
   <img width="501" height="577" alt="image" src="https://github.com/user-attachments/assets/7a05bfd6-569f-479c-b217-2f166299f57c" />
