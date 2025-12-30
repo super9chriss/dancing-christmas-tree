@@ -2,7 +2,8 @@
 A christmas tree which dances to music played on my computer. I was at a Christmas market and saw dancing christmas trees there and thought they were nice but they only dance to jingle bells so i wanted to make my own which dances to all songs.
 
 <div align="center">
-  <img width="501" height="577" alt="image" src="https://github.com/user-attachments/assets/7a05bfd6-569f-479c-b217-2f166299f57c" />
+  <img width="662" height="732" alt="image" src="https://github.com/user-attachments/assets/b9624ca2-e1d8-4323-867c-84f37749c5f1" />
+
 
 </div>
 
