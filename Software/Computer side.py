@@ -1,27 +1,47 @@
+import serial
 import sounddevice as sd
 import numpy as np
-import serial
 import time
+import random
 
-DEVICE = 11           
-SAMPLERATE = 48000
-BLOCKSIZE = 1024
-SMOOTH = 0.2    
-servo_value = 90      
+SERIAL_PORT = 'COM4'
+BAUD_RATE = 115200
+MIN_HOEK = 80
+MAX_HOEK = 100
+RUST_HOEK = 90
+SENSITIVITY = 20       
+DREMPELWAARDE = 2.0    
 
-usb = serial.Serial('COM4', 115200)  
-time.sleep(2)                         
 
-def callback(indata, frames, time_info, status):
-    global servo_value
-    volume = np.sqrt(np.mean(indata**2))
-    target = int(volume * 1800)       
-    target = max(0, min(180, target)) 
-    servo_value = int(servo_value + (target - servo_value) * SMOOTH)
+try:
+    ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=0.1)
+    time.sleep(2)
+    print(f"Verbonden met {SERIAL_PORT}")
+except Exception as e:
+    print(f"Kon geen verbinding maken: {e}")
+    exit()
 
-    usb.write(bytes([servo_value]))
+def audio_callback(indata, frames, time_info, status):
+    if status:
+        print(status)
+    volume_norm = np.linalg.norm(indata) * 10
+    if volume_norm < DREMPELWAARDE:
+        angle = RUST_HOEK
+    else:
+        uitslag = int(volume_norm * SENSITIVITY)
+        richting = random.choice([-1, 1])
+        angle = RUST_HOEK + (uitslag * richting)
+        angle = max(MIN_HOEK, min(angle, MAX_HOEK))
+    try:
+        ser.write(f"{angle}\n".encode())
+    except:
+        pass
 
-with sd.InputStream(device=DEVICE, channels=2, samplerate=SAMPLERATE,
-                    blocksize=BLOCKSIZE, latency='low', callback=callback):
-    print("Stream gestart, speel nu muziek af...")
-    input("Druk Enter om te stoppen\n")
+try:
+       with sd.InputStream(callback=audio_callback, blocksize=2048): 
+        while True:
+            time.sleep(0.1)
+except KeyboardInterrupt:
+    print("\nGestopt.")
+    ser.write(f"{RUST_HOEK}\n".encode())
+    ser.close()
