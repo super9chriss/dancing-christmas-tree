@@ -2,7 +2,8 @@
 A christmas tree which dances to music played on my computer. I was at a Christmas market and saw dancing christmas trees there and thought they were nice but they only dance to jingle bells so i wanted to make my own which dances to all songs.
 
 <div align="center">
-  <img width="662" height="732" alt="image" src="https://github.com/user-attachments/assets/b9624ca2-e1d8-4323-867c-84f37749c5f1" />
+  <img width="428" height="635" alt="image" src="https://github.com/user-attachments/assets/485fc764-9f50-4347-93e8-518404dc72d2" />
+
 
 
 </div>
@@ -19,7 +20,9 @@ A christmas tree which dances to music played on my computer. I was at a Christm
 
 ## wiring, mechansim and wireframe of the tree
 
-| **wiring** | **Mechanism** | **wireframe** |
-| :---: | :---: | :---: |
-| <img width="778" height="501" alt="image" src="https://github.com/user-attachments/assets/abef33af-e812-4351-933e-59c16173c8ab" />| <img width="391" height="468" alt="image" src="https://github.com/user-attachments/assets/f6404c10-63d4-495a-bed7-53a12203e94e" />|<img width="498" height="574" alt="image" src="https://github.com/user-attachments/assets/8c3d9f50-4440-477f-9632-72afd065df6d" />
+| **wiring** | **Mechanism** | **wireframe** | **3d model** |
+| :---: | :---: | :---: | :---: |
+| <img width="778" height="501" alt="image" src="https://github.com/user-attachments/assets/abef33af-e812-4351-933e-59c16173c8ab" />| <img width="391" height="468" alt="image" src="https://github.com/user-attachments/assets/f6404c10-63d4-495a-bed7-53a12203e94e" />|<img width="498" height="574" alt="image" src="https://github.com/user-attachments/assets/8c3d9f50-4440-477f-9632-72afd065df6d" />|<img width="662" height="732" alt="image" src="https://github.com/user-attachments/assets/c824b307-cbf5-45d7-93e4-f48b1ffe88a6" />
+
+
 
